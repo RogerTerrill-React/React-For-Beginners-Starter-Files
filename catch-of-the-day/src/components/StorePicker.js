@@ -11,6 +11,7 @@ class StorePicker extends Component {
     event.preventDefault();
     // 2. Get the text from the input
     const storeName = this.myInput.current.value;
+    console.log(this);
     // 3. Change the page to /store/whatever-they-entered
     this.props.history.push(`/store/${storeName}`);
   };
