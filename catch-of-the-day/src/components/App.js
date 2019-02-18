@@ -40,6 +40,7 @@ class App extends Component {
       <div className="catch-of-the-day">
         <div className="menu">
           <Header tagline="Fresh Seafood Market" />
+          {/* This displays the fishes on the left side */}
           <ul className="fishes">
             {Object.keys(this.state.fishes).map(key => (
               <Fish
@@ -51,7 +52,7 @@ class App extends Component {
             ))}
           </ul>
         </div>
-        <Order />
+        <Order fishes={this.state.fishes} order={this.state.order}/>
         <Inventory
           loadSampleFishes={this.loadSampleFishes}
           addFish={this.addFish}
