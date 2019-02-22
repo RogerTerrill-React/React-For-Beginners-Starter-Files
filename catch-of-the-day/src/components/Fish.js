@@ -26,7 +26,7 @@ class Fish extends Component {
           <span className="price">{formatPrice(price)}</span>
         </h3>
         <p>{desc}</p>
-        <button disabled={!isAvailable} onClick={this.props.addToOrder(this.props.index)}>
+        <button disabled={!isAvailable} onClick={()=>this.props.addToOrder(this.props.index)}>
           {isAvailable ? 'Add To Cart' : 'Sold Out'}
         </button>
       </li>
